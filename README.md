@@ -1,47 +1,47 @@
 # eye-fatigue-analysis-Detection
 This project is an eye blink detection application used to detect fatigue by tracking eye movements in a video stream.
 
-Göz Kırpma Tespiti ve Yorgunluk Algılama
-Bu proje, video akışında göz kırpma hareketlerini izleyerek kullanıcıların yorgunluğunu algılayan bir uygulamadır. Gözün kapanma oranını (Eye Aspect Ratio, EAR) kullanarak yorgunluğu tespit eder ve ekran üzerinde bir uyarı gösterir.
+Blink Detection and Fatigue Detection
+This project is an application that detects users' fatigue by monitoring eye blink movements in the video stream. It detects fatigue using the eye's closing rate (Eye Aspect Ratio, EAR) and shows an alert on the screen.
 
-Özellikler
-Yüz ve göz algılama
-Göz kapanma oranını (EAR) hesaplama
-Yorgunluk tespiti için bir eşik değeri belirleme
-Ekranda yorgunluk uyarısı gösterme
-Gereksinimler
+Features
+Face and eye detection
+Calculating eye closure ratio (EAR)
+Set a threshold value for fatigue detection
+Show fatigue warning on screen
+Requirements
 Python 3.x
 OpenCV
 dlib
 numpy
 scipy
-Gerekli Python paketlerini yüklemek için:
+To install the required Python packages:
 
 bash
-Copy code
+copy code
 pip install opencv-python dlib numpy scipy
-Kurulum
-Dlib'in Yüz Nokta Modelini İndirin:
+Setup
+Download Dlib's Face Point Model:
 
-shape_predictor_68_face_landmarks.dat dosyasını dlib.net adresinden indirin ve proje klasörüne yerleştirin.
+Download shape_predictor_68_face_landmarks.dat from dlib.net and place it in the project folder.
 
-Kodunuzu Çalıştırın:
+Run Your Code:
 
-Aşağıdaki komutu kullanarak Python scriptinizi çalıştırın:
+Run your Python script using the following command:
 
 bash
-Copy code
+copy code
 python main.py
-Kod Açıklaması
-calculate_ear(eye): Bir gözün kapanma oranını hesaplar.
-draw_eye_landmarks(frame, eye_landmarks): Göz üzerindeki önemli noktaları ekranda işaretler.
-main(): Video akışını başlatır, yüz ve gözleri tespit eder, EAR hesaplar ve yorgunluk uyarısını gösterir.
-Kullanım
-Uygulamayı başlattıktan sonra, web kamerası ile görüntü alınır.
-Gözlerinizin kapanma oranı izlenir ve belirlenen eşik değeri altında olduğunda "YORGUNLUK ALGILANDI!" mesajı ekranda görüntülenir.
-Programdan çıkmak için q tuşuna basın.
-Sorun Giderme
-shape_predictor_68_face_landmarks.dat dosyasının doğru yerde olduğundan emin olun.
-Kamera erişimi izinlerini kontrol edin ve başka uygulamaların kamerayı kullanmadığından emin olun.
-Katkıda Bulunma
-Bu projeye katkıda bulunmak isterseniz, pull request göndererek veya açık sorunları çözerek yardımcı olabilirsiniz.
+Code Description
+calculate_ear(eye): Calculates the closing ratio of an eye.
+draw_eye_landmarks(frame, eye_landmarks): Marks important points on the eye on the screen.
+main(): Starts the video stream, detects face and eyes, calculates EAR and shows fatigue warning.
+Use
+After starting the application, images are taken with the webcam.
+The closing rate of your eyes is monitored and when it is below the set threshold value, "FATIGUE DETECTED!" message appears on the screen.
+Press q to exit the program.
+Troubleshooting
+Make sure the shape_predictor_68_face_landmarks.dat file is in the right place.
+Check camera access permissions and make sure no other apps are using the camera.
+Contributing
+If you would like to contribute to this project, you can help by submitting a pull request or solving open issues
