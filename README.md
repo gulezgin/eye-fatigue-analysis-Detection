@@ -30,6 +30,7 @@ Run Your Code:
 Run your Python script using the following command:
 
 bash
+
 copy code
 python main.py
 Code Description
